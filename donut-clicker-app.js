@@ -1,17 +1,20 @@
+import DonutMaker from "./donut-maker";
 
+renderPage();
 
-loadEvents();
-
-function loadEvents(){
-
-    form.addEventListener("Clicker", increaseClicker);
-
-var clickValu = 0;
+function renderPage(){
+    increaseClicker();
 }
 
-function increaseClicker(event) {
-    clickValu += 1;
-    document.getElementById(click-counter).innerHTML = clickValu;
+function increaseClicker(){
+    const createBtn = document.querySelector('#make');
 }
+
+
+const container = (document.querySelector('.container').innerText =
+    'mmmmmmmmm doughnuts.... ahhhhhhh!');
+
+
+
 
     
