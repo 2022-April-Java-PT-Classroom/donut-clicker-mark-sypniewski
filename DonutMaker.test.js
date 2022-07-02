@@ -39,11 +39,24 @@ describe ("DonutMaker", () => {
         expect(underTest.costAutoclickers).toEqual(121);
     });
 
+    test("activating autoclickers will increase donut count based on autoclickers owned", () => {
+        const underTest = new DonutMaker(100, 2, 110, 0, 10);
+        underTest.activateAutoclickers();
+        expect(underTest.numDonuts).toEqual(102);
+    });
+
     test("should be able to add a multiplier with 10 donuts", () => {
         const underTest = new DonutMaker(100, 0, 100, 0, 10);
         underTest.addMultiplier();
         expect(underTest.numDonuts).toEqual(90);
         expect(underTest.numMultipliers).toEqual(1);  
+    });
+
+    test("should NOT be able to purchase a multiplier with 9 donuts", () => {
+        const underTest = new DonutMaker(9, 0, 100, 0, 10);
+        underTest.addMultiplier();
+        expect(underTest.numDonuts).toEqual(9);
+        expect(underTest.numAutoclickers).toEqual(0);
     });
 
     test("cost of multiplier should go up 10% eash additional purchase", () => {
@@ -55,4 +68,7 @@ describe ("DonutMaker", () => {
         expect(underTest.costMultipliers).toEqual(12);
     });
 
-});
+    
+
+
+})

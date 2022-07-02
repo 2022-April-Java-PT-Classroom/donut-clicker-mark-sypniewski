@@ -22,12 +22,19 @@ class DonutMaker {
         }
     }
 
+    activateAutoclickers(){
+        this.numDonuts += this.numAutoclickers;
+    }
+
     addMultiplier(){
+        if (this.numDonuts >= 10) {
          this.numDonuts -= this.costMultipliers;
          this.numMultipliers += 1;
          this.costMultipliers = Math.round(this.costMultipliers * 1.1);
         }
     }
 
+    
+}
 
  export default DonutMaker;
