@@ -46,4 +46,13 @@ describe ("DonutMaker", () => {
         expect(underTest.numMultipliers).toEqual(1);  
     });
 
+    test("cost of multiplier should go up 10% eash additional purchase", () => {
+        const underTest = new DonutMaker(111, 0, 100, 0, 10);
+        underTest.addMultiplier();
+        underTest.addMultiplier();
+        expect(underTest.numDonuts).toEqual(90);
+        expect(underTest.numMultipliers).toEqual(2);
+        expect(underTest.costMultipliers).toEqual(12);
+    });
+
 });

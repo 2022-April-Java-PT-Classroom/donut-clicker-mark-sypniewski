@@ -23,8 +23,9 @@ class DonutMaker {
     }
 
     addMultiplier(){
-        this.numDonuts -= this.costMultipliers;
-            this.numMultipliers += 1;
+         this.numDonuts -= this.costMultipliers;
+         this.numMultipliers += 1;
+         this.costMultipliers = Math.round(this.costMultipliers * 1.1);
         }
     }
 
