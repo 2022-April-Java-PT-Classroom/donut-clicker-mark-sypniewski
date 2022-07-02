@@ -1,4 +1,4 @@
-import DonutMaker from "./donut-maker";
+import DonutMaker from "./DonutMaker";
 
 renderPage();
 
@@ -8,6 +8,10 @@ function renderPage(){
 
 function increaseClicker(){
     const createBtn = document.querySelector('#make');
+    
+    createBtn.addEventListener('click', () => {
+        increaseClicker();
+    })
 }
 
 
