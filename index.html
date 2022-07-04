@@ -20,12 +20,35 @@
 
     </header>
     <div class="container"></div>
+    <h1><center>Welcome to Fred the Baker Baking Company!</center></h1>
 
     <section id="Clicker"></section>
-    <h3><center>Clicker</center></h3>
-      <center></cener><button id="make">Make A Donut</button></center>
+      <center><button id="btn" onclick="addDonut();">Make A Donut</button></center>
+    <center> <p id="counter"></p></center>
+      <script>
+      var numDonuts=0;
+      function addDonut()
+      {
+          numDonuts += 1;
+          document.getElementById("counter").innerHTML=numDonuts;
+      }
+      </script>
+
 
     <section id="AutoClicker"></section>
+    <center><button id="btn" onclick="addAutoclicker();">Purchase an AutoClicker</button></center>
+    <center> <p id="autoclicker"></p></center>
+      <script>
+      var costAutoClickers=100;
+      function addAutoclicker() {
+        if (this.numDonuts >= 100) {
+           this.numDonuts -= this.costAutoclickers;
+           this.numAutoclickers += 1;
+           this.costAutoclickers = Math.round(this.costAutoclickers * 1.1);
+           document.getElementById("autoclicker").innerHTML=numAutoclickers;
+        }
+    }
+      </script>
 
     <section id="ClickMultiplier"></section>
 

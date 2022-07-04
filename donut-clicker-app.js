@@ -3,21 +3,22 @@ import DonutMaker from "./DonutMaker";
 renderPage();
 
 function renderPage(){
-    increaseClicker();
+    createDonutMaker();
 }
 
-function increaseClicker(){
-    const createBtn = document.querySelector('#make');
-    
+function createDonutMaker() {
+    const createBtn = document.querySelector('#btn');
+
     createBtn.addEventListener('click', () => {
-        increaseClicker();
+        const createdDonutMaker = new DonutMaker(0,0,100,0,10,0);
     })
-}
 
+    
+}
+    
 
 const container = (document.querySelector('.container').innerText =
     'mmmmmmmmm doughnuts.... ahhhhhhh!');
-
 
 
 
