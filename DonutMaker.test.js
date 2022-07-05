@@ -36,7 +36,7 @@ describe ("DonutMaker", () => {
         underTest.addAutoclicker();
         expect(underTest.numDonuts).toEqual(1);
         expect(underTest.numAutoclickers).toEqual(2);
-        expect(underTest.costAutoclickers).toEqual(121);
+        expect(underTest.costAutoclicker).toEqual(121);
     });
 
     test("activating autoclickers will increase donut count based on autoclickers owned", () => {
@@ -65,7 +65,7 @@ describe ("DonutMaker", () => {
         underTest.addMultiplier();
         expect(underTest.numDonuts).toEqual(90);
         expect(underTest.numMultipliers).toEqual(2);
-        expect(underTest.costMultipliers).toEqual(12);
+        expect(underTest.costMultiplier).toEqual(12);
     });
 
     test("activating multiplier will increase click bonus based on multipliers owned", () => {

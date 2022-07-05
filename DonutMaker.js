@@ -1,11 +1,11 @@
 class DonutMaker {
 
-    constructor(numDonuts, numAutoclickers, costAutoclickers, numMultipliers, costMultipliers, activeMultipliers) {
+    constructor(numDonuts, numAutoclickers, costAutoclicker, numMultipliers, costMultiplier, activeMultipliers) {
         this.numDonuts = numDonuts;
         this.numAutoclickers = numAutoclickers;
-        this.costAutoclickers = costAutoclickers;
+        this.costAutoclicker = costAutoclicker;
         this.numMultipliers = numMultipliers;
-        this.costMultipliers = costMultipliers;
+        this.costMultiplier = costMultiplier;
         this.activeMultipliers = activeMultipliers;
     }
 
@@ -16,9 +16,9 @@ class DonutMaker {
 
     addAutoclicker() {
         if (this.numDonuts >= 100) {
-           this.numDonuts -= this.costAutoclickers;
+           this.numDonuts -= this.costAutoclicker;
            this.numAutoclickers += 1;
-           this.costAutoclickers = Math.round(this.costAutoclickers * 1.1);
+           this.costAutoclicker = Math.round(this.costAutoclicker * 1.1);
         }
     }
 
@@ -28,9 +28,9 @@ class DonutMaker {
 
     addMultiplier(){
         if (this.numDonuts >= 10) {
-         this.numDonuts -= this.costMultipliers;
+         this.numDonuts -= this.costMultiplier;
          this.numMultipliers += 1;
-         this.costMultipliers = Math.round(this.costMultipliers * 1.1);
+         this.costMultiplier = Math.round(this.costMultiplier * 1.1);
         }
     }
 

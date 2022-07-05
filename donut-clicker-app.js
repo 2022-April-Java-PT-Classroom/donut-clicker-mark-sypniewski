@@ -1,4 +1,6 @@
 import DonutMaker from "./DonutMaker";
+import { displayDonutStats } from "./utilities/utils";
+
 
 renderPage();
 
@@ -6,15 +8,22 @@ function renderPage(){
     createDonutMaker();
 }
 
-function createDonutMaker() {
-    const createBtn = document.querySelector('#btn');
+function createDonutMaker(event) {
 
-    createBtn.addEventListener('click', () => {
-        const createdDonutMaker = new DonutMaker(0,0,100,0,10,0);
-    })
+const myDonutMaker = new DonutMaker(0,0,100,0,10,0);
+const donutStats = document.querySelector('#myDonutStats');
+const donutInfoPara = document.createElenemt('p');
+const donutInfoSection = document.createElement('section');
 
-    
+displayDonutStats(donutInfoPara, myDonutMaker);
+
+donutInfoSection.appendChild(donutInfoPara);
+
+
 }
+
+
+
     
 
 const container = (document.querySelector('.container').innerText =
