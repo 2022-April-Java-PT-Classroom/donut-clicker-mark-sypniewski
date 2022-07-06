@@ -11,7 +11,7 @@ class DonutMaker {
 
 
     addDonut() {
-        this.numDonuts += 1;
+        this.numDonuts += this.numAutoClicker >0 ? 1 * this.numAutoclickers: 1;
     }
 
     addAutoclicker() {
@@ -23,7 +23,7 @@ class DonutMaker {
     }
 
     activateAutoclickers(){
-        this.numDonuts += 1 + this.numAutoclickers;
+        this.numDonuts += 1 * this.numAutoclickers;
     }
 
     addMultiplier(){

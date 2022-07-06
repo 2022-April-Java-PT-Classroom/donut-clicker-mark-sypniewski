@@ -42,7 +42,7 @@ describe ("DonutMaker", () => {
     test("activating autoclickers will increase donut count based on autoclickers owned", () => {
         const underTest = new DonutMaker(100, 2, 110, 0, 10, 0);
         underTest.activateAutoclickers();
-        expect(underTest.numDonuts).toEqual(103);
+        expect(underTest.numDonuts).toEqual(102);
     });
 
     test("should be able to add a multiplier with 10 donuts", () => {
