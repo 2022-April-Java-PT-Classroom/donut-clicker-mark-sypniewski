@@ -1,0 +1,12 @@
+.info{
+    position:fixed;
+    bottom: 0;
+    width:100%;
+    color:brown;
+}
+
+button{
+    background-color:orange;
+    color:brown;
+    font-size: 19px;
+}

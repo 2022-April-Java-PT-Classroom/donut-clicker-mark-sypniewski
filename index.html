@@ -5,9 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donut Clicker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="donut-clicker-app.js"></script>
   </head>
   <body>
-    <div class="container"></div>
-    <script src="./index.js"></script>
+
+    <header>
+        <nav class="nav">
+          <div>
+            <ul class="nav items">
+              <li class ="nav link"><a href="/company">About Us</a></li>
+              <li class ="nav link"><a href="/cookie">Cookie Clicker</a></li>
+              <li class ="nav link"><a href="/contact">Contact Us</a></li>
+            </ul>
+          </div>
+    </header>
+
+    <div class="container">
+    <h1><center>Welcome to Fred the Baker Baking Company!</center></h1>
+
+      <div class="clicker">
+          <center><button id="make">Make A Donut</button></center>
+      </div>
+
+      <div class="autoclicker">
+          <button id="auto">Add An Autoclicker</button>
+
+      <div class="multiplier">
+          <button id="multiply">Add A Multiplier</button>
+      </div>
+
+      <div class="info">
+         <p id="stats">Donut Maker Stats</p>
+      </div>
+
+    </div>
+
   </body>
 </html>
