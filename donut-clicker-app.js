@@ -4,6 +4,7 @@ renderPage();
 
 function renderPage(){
     makeDonut();
+    // activateAutoclickers();
 }
 
 function makeDonut () {
@@ -12,13 +13,34 @@ function makeDonut () {
             const createBtn2 = document.querySelector('#auto');
             const createBtn3 = document.querySelector('#multiply');
 
-            updateStats(makeDonut);
+            updateStats();
 
             createBtn1.addEventListener('click', () => {
                 makeDonut.addDonut();
                 updateStats();
             });
 
+            createBtn2.addEventListener('click', () => {
+                makeDonut.addAutoclicker();
+                makeDonut.activateAutoclickers();
+                updateStats();
+            })
+            
+
+            createBtn3.addEventListener('click', () => {
+                makeDonut.addMultiplier();
+                updateStats();
+            })
+
+
+            setInterval(() => {
+                if(makeDonut.isAutoclickerActive == true){
+                    makeDonut.addDonut(),100}
+                });
+            
+            
+
+            
 
 
          function updateStats(){          
