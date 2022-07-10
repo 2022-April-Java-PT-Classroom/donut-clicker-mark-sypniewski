@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donut Clicker</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="donut-clicker-app.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    
   </head>
   <body>
 
@@ -15,31 +15,35 @@
           <div>
             <ul class="nav items">
               <li class ="nav link"><a href="/company">About Us</a></li>
-              <li class ="nav link"><a href="/cookie">Cookie Clicker</a></li>
+              <li class ="nav link"><a href="https://orteil.dashnet.org/cookieclicker/">Cookie Clicker</a></li>
               <li class ="nav link"><a href="/contact">Contact Us</a></li>
             </ul>
           </div>
     </header>
-
-    <div class="container">
-    <h1><center>Welcome to Fred the Baker Baking Company!</center></h1>
+  <main>
+    <div class="content">
+    <h1>Welcome to Fred the Baker Baking Company!</h1>
 
       <div class="clicker">
-          <center><button id="make">Make A Donut</button></center>
+          <button type="button" name="button" id="make">Make A Donut</button>
+          <p >Donut Total: <span id="donuttotal">0</span></p>
       </div>
 
       <div class="autoclicker">
           <button id="auto">Add An Autoclicker</button>
+          <p >Autoclickers: <span id="autototal">0</span></p>
+          </div>
 
       <div class="multiplier">
           <button id="multiply">Add A Multiplier</button>
-      </div>
-
-      <div class="info">
-         <p id="stats">Donut Maker Stats</p>
+          <p >Multipliers: <span id ="multiplytotal">0</span></p>
       </div>
 
     </div>
+  </main>
+    <script type=module src="./donut-clicker-app.js"></script>
+    <script type=module scr="./Donutmaker.js"></script>
 
   </body>
+  <footer>&copy Mark Sypniewski 2022</footer>
 </html>

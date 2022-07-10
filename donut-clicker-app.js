@@ -1,34 +1,33 @@
-import DonutMaker from "./DonutMaker";
-import { displayDonutStats } from "./utilities/utils";
-
+import DonutMaker from './DonutMaker.js';
 
 renderPage();
 
 function renderPage(){
-    createDonutMaker();
+    makeDonut();
 }
 
-function createDonutMaker(event) {
+function makeDonut () {
+            const makeDonut = new DonutMaker(0,0,100,false,0,10,0);
+            const createBtn1 = document.querySelector('#make');
+            const createBtn2 = document.querySelector('#auto');
+            const createBtn3 = document.querySelector('#multiply');
 
-const myDonutMaker = new DonutMaker(0,0,100,0,10,0);
-const donutStats = document.querySelector('#myDonutStats');
-const donutInfoPara = document.getElementById("numDonuts");
-const donutInfoSection = document.createElement('section');
+            updateStats(makeDonut);
 
-displayDonutStats(donutInfoPara, myDonutMaker);
-
-donutInfoSection.appendChild(donutInfoPara);
-
-
-}
-
+            createBtn1.addEventListener('click', () => {
+                makeDonut.addDonut();
+                updateStats();
+            });
 
 
-    
 
-const container = (document.querySelector('.container').innerText =
-    'mmmmmmmmm doughnuts.... ahhhhhhh!');
-
+         function updateStats(){          
+        donuttotal.innerText = makeDonut.numDonuts;
+        autototal.innerText = makeDonut.numAutoclickers;
+        multiplytotal.innerText = makeDonut.numMultipliers;
+    }
+   
+}       
 
 
     
